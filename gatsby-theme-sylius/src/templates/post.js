@@ -6,8 +6,8 @@ export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
-      <header class="header">
-        <h1 class="">{post.frontmatter.title}</h1>
+      <header className="header">
+        <h1 className="">{post.frontmatter.title}</h1>
       </header>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
