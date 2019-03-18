@@ -1,12 +1,8 @@
 module.exports = {
-  __experimentalThemes: [
-    {
-      resolve: "gatsby-theme-sylius",
-      options: { root: __dirname, siteMetadata: { menu: [] } } }
-  ],
+  __experimentalThemes: [{ resolve: "gatsby-theme-sylius", options: { root: __dirname } }],
 
   siteMetadata: {
-    title: `Sylius SITE`,
+    title: 'Site',
     menu: [
       {
         title: "The Book",

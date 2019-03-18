@@ -1,24 +1,29 @@
 const path = require(`path`)
 
-module.exports = {
-  siteMetadata: {
-    title: `Sylius`,
-    menu: [
-      {
-        title: "Index",
-        slug: "/",
-      },
+const developmentMenu = [
+  {
+    title: "Index",
+    slug: "/"
+  },
+  {
+    title: "Md",
+    slug: "/md",
+    children: [
       {
         title: "Md",
-        slug: "/md",
-        children: [
-          {
-            title: "Md",
-            slug: "/md"
-          }
-        ]
+        slug: "/md"
       }
-    ],
+    ]
+  }
+];
+
+module.exports = {
+  siteMetadata: {
+    title: "Theme",
+    menu:
+      global.process.env.npm_package_name === "gatsby-theme-sylius"
+        ? developmentMenu
+        : []
   },
 
   plugins: [
